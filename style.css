@@ -1,0 +1,376 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0a17; /* preto escuro */
+  color: #d1c4e9; /* roxo claro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  background: #2c1f56; /* roxo escuro */
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(120, 46, 230, 0.7);
+}
+
+header h1 {
+  color: #9c27b0;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ce93d8;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b388ff;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  color: #b388ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #7e57c2;
+}
+
+.section p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+  color: #d1c4e9;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #7e57c2;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #1b1464;
+  border-radius: 15px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(121, 27, 230, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px #ce93d8;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section .skill {
+  max-width: 400px;
+  margin: 15px auto;
+  text-align: left;
+}
+
+.skill p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  background: #3a0ca3;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  height: 100%;
+  background: #00ff90;
+  border-radius: 15px 0 0 15px;
+  transition: width 1.5s ease;
+}
+
+/* Testimonials */
+.testimonials-section .testimonial {
+  background: #321fdb;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px #7e57c2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonials-section img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #ce93d8;
+}
+
+.testimonials-section p {
+  text-align: left;
+  color: #d1c4e9;
+  font-size: 1.1rem;
+}
+
+/* Gallery */
+.galeria-section .gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.galeria-section img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #7e57c2;
+  transition: transform 0.3s ease;
+}
+
+.galeria-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-section a {
+  color: #00ff90;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.social-links li a {
+  color: #ce93d8;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.whatsapp-link {
+  font-size: 1.2rem;
+  color: #25d366;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-link i {
+  font-size: 1.5rem;
+}
+
+/* Formulário */
+form {
+  background: #2e1a72;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #7e57c2;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #00ff90;
+  background-color: #111;
+  color: #d1c4e9;
+}
+
+button {
+  background-color: #00ff90;
+  border: none;
+  color: #0d0a17;
+  font-weight: 700;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00cc70;
+}
+
+footer {
+  background: #2c1f56;
+  padding: 15px 0;
+  color: #ce93d8;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(120, 46, 230, 0.7);
+}
+
+/* Animação de fadeIn */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skill-text {
+  flex: 1;
+}
+
+.skill-text label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e1d5f7;
+}
+
+.skill-text progress {
+  width: 100%;
+  height: 18px;
+  border-radius: 10px;
+}
+.profile-container {
+  display: flex;
+  flex-direction: row; /* antes estava column */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #a020f0; /* roxo neon */
+  object-fit: cover;
+  box-shadow: 0 0 15px #a020f0;
+}
+
+.profile-text {
+  flex: 1;
+  color: #e1d5f7;
+  text-align: justify;.profile-text {
+  max-width: 500px;
+}
+
+}
+
+.profile-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #a020f0;
+}
